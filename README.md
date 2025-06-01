@@ -10,11 +10,22 @@ For each JSON object you should provide two types of structs:
 - Your normal DUT (_YOUR_STRUCT_, _YOUR_SUB_STRUCT_ in example)
 - JSONVAR DUTs (note! names should match JSON file exactly) (_JS_YOUR_STRUCT_, _JS_YOUR_SUB_STRUCT_ in example)
 
+That should be done for every JSON object type.
+Core:
+
+![Structs for core object](imgs/CORE.png)
+
+And inner:
+
+![Structs for inner object](imgs/Sub.png)
+
 And converting methods
 - For top-most JSON object (_CORE_JS_TO_ST_ in example)
 - And for inner JSON objects (_SUB_JS_TO_ST_ in example)
 
 Also you should **specify your DUTs** in function block and maximum possible **array size** of the topmost object (see [Limitations/Arrays](#Arrays) )
+
+![FB-tuning](imgs/FB.png)
 
 ## Limitations
 ### Memory
