@@ -6,13 +6,13 @@ Uses the [PRO JSON lib by TVM](https://forge.codesys.com/lib/pro-json/home/Home/
 
 Some customization of FB required:
 
-You shold provide two types of structs:
-- Your normal DUT
-- JSONVAR DUTs (note! names should match JSON file exactly)
+For each JSON object you should provide two types of structs:
+- Your normal DUT (_YOUR_STRUCT_, _YOUR_SUB_STRUCT_ in example)
+- JSONVAR DUTs (note! names should match JSON file exactly) (_JS_YOUR_STRUCT_, _JS_YOUR_SUB_STRUCT_ in example)
 
 And converting methods
-- For top-most JSON object
-- And for inner JSON objects
+- For top-most JSON object (_CORE_JS_TO_ST_ in example)
+- And for inner JSON objects (_SUB_JS_TO_ST_ in example)
 
 Also you should **specify your DUTs** in function block and maximum possible **array size** of the topmost object (see [Limitations/Arrays](#Arrays) )
 
