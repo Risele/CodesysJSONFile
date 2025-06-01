@@ -77,4 +77,8 @@ Do not work with non-english UTF8 symbols (or I failed to do this).
 
 ## Requirements:
 For Cyryllic symols use Win-1251 (CP1251) encoding. 
-Use iconv from Linux to convert files if needed.
+Use [Owen String Utils](https://ftp.owen.ru/CoDeSys3/04_Library/05_3.5.11.5/02_Libraries/OwenStringUtils_v3.5.4.9.compiled-library) to deal with CP1251->WStrings
+
+Use iconv from Linux to convert file encoding if needed.
+
+
