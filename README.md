@@ -2,8 +2,24 @@
 Read JSON file to CODESYS Structs
 
 Uses the [PRO JSON lib by TVM](https://forge.codesys.com/lib/pro-json/home/Home/), version  [1.0.0.16 ](https://www.dropbox.com/scl/fi/16rzprk6dhnr6204ya5vu/PRO_JSON-1.0.0.16.library?rlkey=vohd00hny0uvm9i6a1avf16vq&dl=0)
+## Usage
+
+Some customization of FB required:
+
+You shold provide two types of structs:
+- Your normal DUT
+- JSONVAR DUTs (note! names should match JSON file exactly)
+
+And converting methods
+- For top-most JSON object
+- And for inner JSON objects
+
+Also you should **specify your DUTs** in function block and maximum possible **array size** of the topmost object (see [Limitations/Arrays](#Arrays) )
 
 ## Limitations
+### Memory
+Well, it's memory-consuming.
+The memory usage is specified by changing constants at GPL_JSON list in PRO_JSON library section.
 ### Naming
 The names in JSON and in ST-based JSONVARs should match exactly.
 For JSON fields of
